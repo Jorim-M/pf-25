@@ -1,0 +1,1 @@
+import{preloadImages}from"../utils.js";import{ImageTrail}from"./ImageTrail.js";preloadImages(".content__img-inner").then(()=>{document.body.classList.remove("loading"),document.querySelectorAll(".content__5").forEach(e=>{new ImageTrail(e)})});
