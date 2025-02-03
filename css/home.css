@@ -145,10 +145,10 @@ canvas {
 }
 
 .canvas-4 {
-  --gradient-color-2: #000000;
-  --gradient-color-3: #1C1C1C;
-  --gradient-color-4: #686868;
-  --gradient-color-1: #1C1C1C;
+  --gradient-color-1: #4B0305;
+  --gradient-color-3: #FF9900;
+  --gradient-color-4: #8d0801;
+  --gradient-color-2: #bf0603;
 }
 
 .canvas-5 {
