@@ -1930,7 +1930,7 @@ p {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #390099;
+/*  background-color: #390099;*/
   -webkit-transform: translate(0px, 100px);
   -ms-transform: translate(0px, 100px);
   transform: translate(0px, 100px);
@@ -7465,7 +7465,7 @@ p {
   }
 
   .press-h {
-    margin-left: 35.42em;
+    margin-left: 20.42em;
   }
 
   .press {
@@ -8991,7 +8991,7 @@ p {
   }
 
   .paragraph-12 {
-    font-size: 2.25em;
+    font-size: 2.95em;
   }
 
   .paragraph-12.dark-beige {
@@ -9811,7 +9811,7 @@ p {
   }
 
   .detail-img1 {
-    width: 35.56em;
+    width: 80.56em;
     height: 55.56em;
   }
 

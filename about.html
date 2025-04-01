@@ -42,6 +42,19 @@
     </style>
     <style>
       .line-wrapper{overflow:hidden}.h2.not-mobile .line-wrapper{display:inline-block}.prev-img{z-index:5 !important}.current-img{z-index:10 !important}.progress-bar,.contact-link,.contact-link2,.nav-link.contact-link3,.menu-txt-wrap,.links-div{opacity:0}.mask-img{height:100%}.loading-div{display:flex;opacity:100%}.load-txt{opacity:0}.hover-text{transition:400ms ease-out}.hover-text:hover{color:#fff !important}
+      .gradient-canvas {
+        position: absolute;
+        width: 100%;
+        min-height: 220vh !important;
+        opacity: 0;
+        /*        border-radius: 8px;*/
+      }
+      .canvas-6 {
+        --gradient-color-2: #ff0054;
+        --gradient-color-3: #390099;
+        --gradient-color-4: #390099;
+        --gradient-color-1: #2d0465;
+      }
     </style>
   </head>
   <body class="body">
@@ -186,6 +199,7 @@
             </div>
           </div>
           <!--  -->
+          <canvas class="gradient-canvas canvas-6" style="position: absolute;"></canvas>
           <div class="container about-container w-container">
             <div class="about-div">
               <div class="about-atf">
@@ -194,7 +208,7 @@
                 </div>
                 <div class="about-atf-content default-hidden">
                   <div class="about-p split-me exit-strat">
-                    <p class="paragraph">I am a creative and technically skilled professional, currently pursuing my Master's in Human-Computer Interaction and User Experience. I specialize in combining design and development to craft engaging, user-centered digital experiences. I am passionate about innovation and advancing digital interactive experiences.</p>
+                    <p class="paragraph">Tjena! Jorim here 👋. I'm a creative and technically skilled professional, currently pursuing my Master's in Human-Computer Interaction and User Experience. I specialize in combining design and development to craft engaging, user-centered digital experiences. passionate about innovation and advancing digital interactive experiences.</p>
                   </div>
                   <div class="about-p split-me1 exit-strat">
                     <p class="paragraph"> From foundational structures to the finest interaction effects, I aim to contribute to the current and future digital landscape through thoughtful, creative, and impactful solutions. <a href="mailto:jorimmikobia@gmail.com" style="text-decoration:none; color:white;">Please don't hesitate to<span style="color:#ff0054;"> reach out here</span> if you wanna ask any questions or know more details about my background and experience.</a></p>
@@ -230,7 +244,7 @@
             </div>
           </div>
         </section>
-        <section class="section lighter-section exit-strat wf-section">
+        <!-- <section class="section lighter-section exit-strat wf-section">
           <style>
             .lighter-section .dot-cursor {
             background-color: #390099;
@@ -387,7 +401,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
         <!-- Footer -->
         <section class="section footer-section exit-strat wf-section">
           <div class="container footer-container w-container">
@@ -398,7 +412,7 @@
               </p>
               <p class="paragraph-10 main-beige">
                 <span style="opacity:40%;">LINKEDIN:</span> 
-                <span><a class="nav-link" style="padding: 0; position: relative;" onmouseover="hoversound2()" href="https://www.linkedin.com/in/j-m-oduo-910aa4229/">J.M. ODUO</a></span>
+                <span><a class="nav-link" style="padding: 0; position: relative;" onmouseover="hoversound2()" href="https://www.linkedin.com/in/j-m-oduo/">J.M. ODUO</a></span>
               </p>
               <p class="paragraph-10 main-beige"></p>
               <div class="footer-right">
@@ -458,8 +472,10 @@
     <script type="text/javascript" src="js/SplitText.txt"></script>
     <script type="text/javascript" src="js/ScrollSmoother.txt"></script>
     <script type="text/javascript" src="js/clock.js"></script>
+    <script type="module" src="js/press/Gradient.js"></script>
+    <script type="module" src="js/press/main.js"></script>
     <script>
-
+setTimeout(function() {$('.gradient-canvas').css('opacity', '1');}, 1200);
 gsap.registerPlugin(ScrollTrigger,ScrollSmoother,SplitText);let smoother=ScrollSmoother.create({wrapper:".smooth-wrapper",content:".smooth-content",smooth:1,effects:!0,smoothTouch:.1});document.addEventListener("DOMContentLoaded",function(){if($(".default-hidden").css("opacity","1"),window.matchMedia("(min-width: 767px)").matches){const e=new SplitText(".split-h h1",{type:"lines,words,chars",linesClass:"line line++"});$(".split-h .line").wrap('<div class="line-wrapper">'),gsap.from(e.chars,{scrollTrigger:{trigger:".about-atf"},yPercent:200,ease:"expo.out",duration:2,stagger:.08});const s=new SplitText(".split-me p",{type:"lines",linesClass:"line line++"});$(".split-me .line").wrap('<div class="line-wrapper">'),gsap.from(s.lines,{scrollTrigger:{trigger:".split-me"},yPercent:200,ease:"power1.out",stagger:.15,delay:.9,duration:1});const i=new SplitText(".split-me1 p",{type:"lines",linesClass:"line line++"});$(".split-me1 .line").wrap('<div class="line-wrapper">'),gsap.from(i.lines,{scrollTrigger:{trigger:".split-me1"},yPercent:200,ease:"power1.out",stagger:.15,delay:1.2,duration:1}),gsap.to(".footer-strip",{scrollTrigger:{trigger:".last-item"},delay:.2,y:0,duration:1.5,ease:"expo.out"})}}),$(".supplier1").on("mouseenter",function(){let e=$(this).closest(".supplier-item1").index();$(".supplier-img-item1").eq(e).addClass("current-img"),$(".imghover1").eq(e).addClass("current-img"),$(".supplier-anim1").click()}),$(".supplier1").on("mouseleave",function(){let e=$(this).closest(".supplier-item1").index();$(".supplier-img-item1").eq(e).removeClass("current-img"),$(".imghover1").eq(e).removeClass("current-img"),$(".supplier-img-item1").eq(e).addClass("prev-img").siblings().removeClass("prev-img")}),$(".press1").on("mouseenter",function(){let e=$(this).closest(".press-item1").index();$(".press-img-item1").eq(e).addClass("current-img"),$(".press-hover1").eq(e).addClass("current-img"),$(".play-anim1").click()}),$(".press1").on("mouseleave",function(){let e=$(this).closest(".press-item1").index();$(".press-img-item1").eq(e).removeClass("current-img"),$(".press-hover1").eq(e).removeClass("current-img"),$(".press-img-item1").eq(e).addClass("prev-img").siblings().removeClass("prev-img")});
 
 
